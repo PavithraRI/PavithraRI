@@ -1,0 +1,2146 @@
+/* =========================================================
+   COMICCRAFT AI
+   MIDNIGHT ORCHID MAGICAL THEME
+   CSS PART 1/6
+   ========================================================= */
+
+
+/* =========================================================
+   1. COLOR VARIABLES
+   ========================================================= */
+
+:root {
+
+    --midnight-orchid: #312A44;
+    --deep-orchid: #222237;
+    --soft-orchid: #302E49;
+
+    --lilac: #887B9D;
+    --iris-mist: #BAB0C8;
+    --plum-blossom: #D7C5D2;
+    --silver-wisteria: #DAD4DF;
+
+    --moonlight: #F4EFFF;
+    --star-glow: #FFF7D6;
+
+    --text-main: #F5F0FA;
+    --text-soft: #D7CFDF;
+    --text-muted: #AAA0B8;
+
+    --glass: rgba(255, 255, 255, 0.07);
+    --glass-border: rgba(255, 255, 255, 0.14);
+
+    --shadow:
+        0 20px 60px rgba(10, 7, 25, 0.45);
+
+    --soft-shadow:
+        0 10px 30px rgba(10, 7, 25, 0.30);
+}
+
+
+/* =========================================================
+   2. BASIC RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: var(--text-main);
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(151, 121, 183, 0.18),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(197, 161, 157, 0.13),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 50% 80%,
+            rgba(124, 103, 137, 0.15),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #211D32 0%,
+            #312A44 45%,
+            #252238 100%
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   3. LINKS
+   ========================================================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   4. MAGICAL NIGHT SKY
+   ========================================================= */
+
+.night-sky {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   5. SOFT MOON
+   ========================================================= */
+
+.moon {
+    position: absolute;
+
+    top: 90px;
+    right: 9%;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #ffffff,
+            var(--moonlight) 45%,
+            #D8CCE5 100%
+        );
+
+    opacity: 0.85;
+
+    box-shadow:
+        0 0 30px rgba(244, 239, 255, 0.35),
+        0 0 80px rgba(214, 200, 229, 0.18);
+
+    animation: moonFloat 7s ease-in-out infinite;
+}
+
+
+@keyframes moonFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* =========================================================
+   6. STARS
+   ========================================================= */
+
+.star {
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--star-glow);
+
+    box-shadow:
+        0 0 8px rgba(255, 247, 214, 0.9),
+        0 0 18px rgba(255, 247, 214, 0.35);
+
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0.25;
+        transform: scale(0.7);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+
+/* =========================================================
+   7. STAR POSITIONS
+   ========================================================= */
+
+.star-1 {
+    top: 12%;
+    left: 8%;
+    animation-delay: 0.2s;
+}
+
+.star-2 {
+    top: 22%;
+    left: 23%;
+    animation-delay: 1s;
+}
+
+.star-3 {
+    top: 9%;
+    left: 45%;
+    animation-delay: 1.8s;
+}
+
+.star-4 {
+    top: 35%;
+    left: 7%;
+    animation-delay: 0.7s;
+}
+
+.star-5 {
+    top: 42%;
+    left: 28%;
+    animation-delay: 2.1s;
+}
+
+.star-6 {
+    top: 18%;
+    right: 25%;
+    animation-delay: 1.3s;
+}
+
+.star-7 {
+    top: 32%;
+    right: 12%;
+    animation-delay: 0.4s;
+}
+
+.star-8 {
+    top: 55%;
+    right: 8%;
+    animation-delay: 2.5s;
+}
+
+.star-9 {
+    top: 68%;
+    left: 10%;
+    animation-delay: 1.5s;
+}
+
+.star-10 {
+    top: 76%;
+    left: 35%;
+    animation-delay: 0.8s;
+}
+
+.star-11 {
+    top: 65%;
+    right: 28%;
+    animation-delay: 2s;
+}
+
+.star-12 {
+    top: 88%;
+    right: 12%;
+    animation-delay: 1.1s;
+}
+
+
+/* =========================================================
+   8. CONTENT SHOULD STAY ABOVE BACKGROUND
+   ========================================================= */
+
+.navbar,
+.hero-section,
+.create-section,
+.team-section,
+.footer {
+    position: relative;
+    z-index: 2;
+}
+/* =========================================================
+   9. CONSTELLATIONS
+   ========================================================= */
+
+.constellation {
+    position: absolute;
+
+    width: 220px;
+    height: 170px;
+
+    opacity: 0.45;
+}
+
+
+/* LEFT CONSTELLATION */
+
+.constellation-one {
+    top: 24%;
+    left: 3%;
+}
+
+
+/* RIGHT CONSTELLATION */
+
+.constellation-two {
+    right: 3%;
+    bottom: 18%;
+
+    transform: rotate(20deg);
+}
+
+
+/* CONSTELLATION STARS */
+
+.constellation span {
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--plum-blossom);
+
+    box-shadow:
+        0 0 8px var(--plum-blossom),
+        0 0 16px rgba(215, 197, 210, 0.4);
+}
+
+
+/* STAR POSITIONS */
+
+.constellation span:nth-child(1) {
+    left: 20px;
+    top: 20px;
+}
+
+.constellation span:nth-child(2) {
+    left: 90px;
+    top: 60px;
+}
+
+.constellation span:nth-child(3) {
+    left: 160px;
+    top: 30px;
+}
+
+.constellation span:nth-child(4) {
+    left: 185px;
+    top: 120px;
+}
+
+
+/* CONSTELLATION LINES */
+
+.constellation i {
+    position: absolute;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--plum-blossom),
+            transparent
+        );
+
+    transform-origin: left center;
+}
+
+
+/* LINE 1 */
+
+.constellation i:nth-of-type(1) {
+    width: 82px;
+
+    left: 25px;
+    top: 24px;
+
+    transform: rotate(27deg);
+}
+
+
+/* LINE 2 */
+
+.constellation i:nth-of-type(2) {
+    width: 75px;
+
+    left: 94px;
+    top: 61px;
+
+    transform: rotate(-25deg);
+}
+
+
+/* LINE 3 */
+
+.constellation i:nth-of-type(3) {
+    width: 92px;
+
+    left: 162px;
+    top: 34px;
+
+    transform: rotate(65deg);
+}
+
+
+/* =========================================================
+   10. NAVIGATION BAR
+   ========================================================= */
+
+.navbar {
+
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 28px 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   11. LOGO
+   ========================================================= */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: var(--silver-wisteria);
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+.logo-star {
+
+    color: var(--iris-mist);
+
+    font-size: 28px;
+
+    text-shadow:
+        0 0 10px rgba(186, 176, 200, 0.8),
+        0 0 25px rgba(186, 176, 200, 0.4);
+
+    animation: logoSparkle 2.5s ease-in-out infinite;
+}
+
+
+@keyframes logoSparkle {
+
+    0%,
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(12deg) scale(1.15);
+    }
+}
+
+
+.logo small {
+
+    color: var(--iris-mist);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    align-self: flex-start;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   12. NAVIGATION LINKS
+   ========================================================= */
+
+.navbar nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 42px;
+}
+
+
+.nav-link {
+
+    position: relative;
+
+    color: var(--text-soft);
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.nav-link:hover {
+
+    color: var(--silver-wisteria);
+
+    transform: translateY(-2px);
+}
+
+
+/* ACTIVE LINK */
+
+.nav-link.active {
+
+    color: var(--silver-wisteria);
+}
+
+
+.nav-link.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -9px;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--plum-blossom);
+
+    box-shadow:
+        0 0 8px var(--plum-blossom);
+
+    transform: translateX(-50%);
+}
+
+
+/* =========================================================
+   13. AI BADGE
+   ========================================================= */
+
+.nav-badge {
+
+    padding: 10px 17px;
+
+    border-radius: 30px;
+
+    color: var(--midnight-orchid);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--silver-wisteria),
+            var(--iris-mist)
+        );
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    box-shadow:
+        0 8px 25px rgba(186, 176, 200, 0.18);
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   14. MOBILE NAVBAR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+
+        padding: 22px 20px;
+
+    }
+
+    .navbar nav {
+
+        gap: 18px;
+
+    }
+
+    .nav-badge {
+
+        display: none;
+
+    }
+
+    .logo {
+
+        font-size: 20px;
+
+    }
+
+}
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.hero-section {
+    max-width: 1250px;
+    min-height: 650px;
+    margin: 0 auto;
+    padding: 70px 40px 110px;
+
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 22px;
+
+    color: var(--iris-mist);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    color: var(--silver-wisteria);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(58px, 7vw, 94px);
+    font-weight: 500;
+
+    line-height: 0.95;
+    letter-spacing: -3px;
+}
+
+.hero-content h1 span {
+    color: var(--iris-mist);
+    font-style: italic;
+
+    text-shadow:
+        0 0 30px rgba(186, 176, 200, 0.25);
+}
+
+.hero-description {
+    max-width: 560px;
+    margin-top: 30px;
+
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+/* =========================================================
+   HERO BUTTON
+   ========================================================= */
+
+.cloud-button {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-top: 35px;
+    padding: 16px 24px;
+
+    min-width: 210px;
+
+    border-radius: 40px;
+
+    overflow: hidden;
+
+    color: var(--midnight-orchid);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--silver-wisteria),
+            var(--iris-mist)
+        );
+
+    font-size: 14px;
+    font-weight: 700;
+
+    box-shadow:
+        0 12px 35px rgba(186, 176, 200, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.cloud-button:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 45px rgba(186, 176, 200, 0.38);
+}
+
+.cloud-button::before,
+.cloud-button::after {
+    content: "";
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.35);
+
+    filter: blur(2px);
+
+    pointer-events: none;
+}
+
+.cloud-button::before {
+    width: 90px;
+    height: 45px;
+
+    left: -18px;
+    bottom: -18px;
+}
+
+.cloud-button::after {
+    width: 100px;
+    height: 50px;
+
+    right: -25px;
+    bottom: -20px;
+}
+
+.cloud-icon {
+    position: relative;
+    z-index: 2;
+
+    font-size: 22px;
+}
+
+.cloud-button span:not(.cloud-icon) {
+    position: relative;
+    z-index: 2;
+}
+
+.button-arrow {
+    font-size: 20px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.cloud-button:hover .button-arrow {
+    transform: translateX(5px);
+}
+/* =========================================================
+   HERO STORY CARD
+   ========================================================= */
+
+.hero-visual {
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.story-card-wrapper {
+    position: relative;
+    z-index: 3;
+
+    animation:
+        floatingCard 5s ease-in-out infinite;
+}
+
+.story-card {
+    width: 285px;
+    min-height: 390px;
+
+    padding: 45px 30px;
+
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--silver-wisteria),
+            var(--iris-mist) 52%,
+            var(--plum-blossom)
+        );
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.45),
+        0 0 55px rgba(186, 176, 200, 0.22);
+
+    transform: rotate(4deg);
+}
+
+.story-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border:
+        1px solid rgba(49, 42, 68, 0.25);
+
+    border-radius: 10px;
+
+    pointer-events: none;
+}
+
+.card-sparkle {
+    color: var(--midnight-orchid);
+
+    font-size: 34px;
+
+    margin-bottom: 20px;
+
+    animation:
+        sparkleFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes sparkleFloat {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.75;
+    }
+
+    50% {
+        transform: scale(1.2) rotate(8deg);
+        opacity: 1;
+    }
+}
+
+.story-card h2 {
+    position: relative;
+
+    color: var(--midnight-orchid);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 43px;
+
+    line-height: 1.05;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+}
+
+.story-card p {
+    position: relative;
+
+    margin-top: 18px;
+
+    color: var(--soft-orchid);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 15px;
+
+    font-style: italic;
+
+    letter-spacing: 2px;
+}
+
+@keyframes floatingCard {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(4deg);
+    }
+
+    50% {
+        transform:
+            translateY(-14px)
+            rotate(2deg);
+    }
+}
+/* =========================================================
+   FLOATING HERO TAGS
+   ========================================================= */
+
+.floating-tag {
+    position: absolute;
+
+    z-index: 5;
+
+    padding: 9px 17px;
+
+    border-radius: 30px;
+
+    border:
+        1px solid rgba(215, 197, 210, 0.22);
+
+    background:
+        rgba(49, 42, 68, 0.72);
+
+    backdrop-filter: blur(12px);
+
+    color: var(--plum-blossom);
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.character-tag {
+    top: 12%;
+    right: 2%;
+
+    animation:
+        tagFloatOne 4s ease-in-out infinite;
+}
+
+.magic-tag {
+    top: 47%;
+    right: -4%;
+
+    animation:
+        tagFloatTwo 5s ease-in-out infinite;
+}
+
+.story-tag {
+    bottom: 12%;
+    left: 2%;
+
+    animation:
+        tagFloatOne 4.5s ease-in-out infinite;
+}
+
+@keyframes tagFloatOne {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes tagFloatTwo {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(9px);
+    }
+}
+
+
+/* =========================================================
+   HERO RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero-section {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 55px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cloud-button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-visual {
+        min-height: 500px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero-section {
+        padding:
+            45px
+            22px
+            80px;
+    }
+
+    .hero-content h1 {
+        font-size: 54px;
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-visual {
+        min-height: 430px;
+
+        transform: scale(0.88);
+    }
+
+    .story-card {
+        width: 255px;
+        min-height: 350px;
+    }
+
+    .character-tag {
+        right: -2%;
+    }
+
+    .magic-tag {
+        right: -8%;
+    }
+}
+/* =========================================================
+   CREATE SECTION
+   ========================================================= */
+
+.create-section {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding:
+        110px
+        30px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.section-heading {
+    max-width: 750px;
+
+    margin:
+        0 auto 55px;
+
+    text-align: center;
+}
+
+
+.section-eyebrow {
+    margin-bottom: 18px;
+
+    color: var(--iris-mist);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.section-heading h2 {
+    color: var(--silver-wisteria);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(42px, 6vw, 65px);
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+.section-heading h2 span {
+    color: var(--iris-mist);
+
+    font-style: italic;
+}
+
+
+.section-heading p {
+    margin-top: 18px;
+
+    color: var(--text-muted);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.comic-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   FORM CARD
+   ========================================================= */
+
+.form-card {
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(186, 176, 200, 0.12),
+            rgba(49, 42, 68, 0.55)
+        );
+
+    border:
+        1px solid rgba(215, 197, 210, 0.14);
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.form-card:hover {
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(215, 197, 210, 0.30);
+}
+
+
+/* =========================================================
+   FORM CARD HEADER
+   ========================================================= */
+
+.form-card-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.form-icon {
+    width: 43px;
+    height: 43px;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--lilac),
+            var(--iris-mist)
+        );
+
+    color: var(--midnight-orchid);
+
+    font-size: 20px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(186, 176, 200, 0.18);
+}
+
+
+.step-number {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: var(--lilac);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.form-card h3 {
+    color: var(--silver-wisteria);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 24px;
+
+    font-weight: 500;
+}
+/* =========================================================
+   FORM LABELS
+   ========================================================= */
+
+label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--iris-mist);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+textarea,
+input,
+select {
+    width: 100%;
+
+    border:
+        1px solid rgba(215, 197, 210, 0.16);
+
+    border-radius: 15px;
+
+    outline: none;
+
+    background:
+        rgba(34, 34, 55, 0.55);
+
+    color: var(--silver-wisteria);
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+textarea {
+    min-height: 145px;
+
+    padding: 18px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   INPUT + SELECT
+   ========================================================= */
+
+input,
+select {
+    height: 55px;
+
+    padding:
+        0 17px;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+textarea::placeholder,
+input::placeholder {
+    color: #7C6789;
+}
+
+
+/* =========================================================
+   FOCUS EFFECT
+   ========================================================= */
+
+textarea:focus,
+input:focus,
+select:focus {
+
+    border-color:
+        var(--iris-mist);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(186, 176, 200, 0.08),
+
+        0 0 25px
+        rgba(186, 176, 200, 0.12);
+}
+
+
+/* =========================================================
+   SELECT OPTIONS
+   ========================================================= */
+
+option {
+    background: var(--soft-orchid);
+
+    color: var(--silver-wisteria);
+}
+
+
+/* =========================================================
+   STORY IDEA CARD
+   ========================================================= */
+
+.story-card-form {
+    position: relative;
+}
+
+.story-card-form textarea {
+    min-height: 160px;
+}
+/* =========================================================
+   GENERATE BAR
+   ========================================================= */
+
+.generate-bar {
+    min-height: 100px;
+
+    padding: 18px 24px;
+
+    border-radius: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--lilac),
+            var(--soft-orchid)
+        );
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================================================
+   GENERATE MESSAGE
+   ========================================================= */
+
+.generate-message {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    color: var(--silver-wisteria);
+
+    font-size: 14px;
+}
+
+
+.generate-message strong {
+    color: var(--moonlight);
+}
+
+
+.sparkle {
+    color: var(--plum-blossom);
+
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   GENERATE BUTTON
+   ========================================================= */
+
+.generate-button {
+    border: none;
+
+    cursor: pointer;
+
+    padding: 17px 24px;
+
+    border-radius: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--silver-wisteria),
+            var(--iris-mist)
+        );
+
+    color: var(--midnight-orchid);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.generate-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 35px
+        rgba(218, 212, 223, 0.25);
+}
+
+
+.generate-button .cloud-icon {
+    font-size: 21px;
+}
+/* =========================================================
+   CREATE SECTION — MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .create-section {
+        padding:
+            80px 20px;
+    }
+
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 43px;
+    }
+
+
+    .section-heading p {
+        font-size: 14px;
+    }
+
+
+    .form-card {
+        padding: 22px;
+
+        border-radius: 20px;
+    }
+
+
+    .form-card h3 {
+        font-size: 21px;
+    }
+
+
+    .generate-bar {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 22px;
+
+        text-align: center;
+    }
+
+
+    .generate-message {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .generate-button {
+        width: 100%;
+    }
+
+}
+/* =========================================================
+   TEAM SECTION
+   ========================================================= */
+
+.team-section {
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding:
+        110px 30px;
+}
+
+
+/* =========================================================
+   TEAM HEADING
+   ========================================================= */
+
+.team-heading {
+    margin-bottom: 55px;
+}
+
+
+/* =========================================================
+   TEAM GRID
+   ========================================================= */
+
+.team-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 14px;
+}
+
+
+/* =========================================================
+   TEAM CARD
+   ========================================================= */
+
+.team-card {
+    min-height: 340px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    text-align: center;
+
+    padding: 25px 15px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--deep-orchid),
+            var(--soft-orchid)
+        );
+
+    border:
+        1px solid
+        rgba(215, 197, 210, 0.15);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.team-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(215, 197, 210, 0.4);
+
+    box-shadow:
+        0 20px 45px
+        rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   CARD TOP GLOW
+   ========================================================= */
+
+.team-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 58%;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(186, 176, 200, 0.35),
+            transparent 68%
+        );
+}
+
+
+/* =========================================================
+   TEAM GLOW
+   ========================================================= */
+
+.team-glow {
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    top: 55px;
+
+    border-radius: 50%;
+
+    background:
+        var(--iris-mist);
+
+    filter: blur(70px);
+
+    opacity: 0.13;
+}
+
+
+/* =========================================================
+   TEAM SYMBOL / SILHOUETTE
+   ========================================================= */
+
+.team-silhouette {
+    position: absolute;
+
+    top: 55px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    width: 130px;
+    height: 180px;
+
+    border-radius:
+        60% 60% 35% 35%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--plum-blossom);
+
+    font-size: 45px;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            var(--plum-blossom) 0 14%,
+            transparent 15%
+        ),
+        linear-gradient(
+            180deg,
+            var(--plum-blossom) 0 50%,
+            transparent 51%
+        );
+
+    opacity: 0.16;
+
+    filter: blur(0.5px);
+}
+
+
+/* =========================================================
+   TEAM NAME
+   ========================================================= */
+
+.team-name {
+    position: relative;
+
+    color: var(--silver-wisteria);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   TEAM ROLE
+   ========================================================= */
+
+.team-role {
+    position: relative;
+
+    margin-top: 6px;
+
+    color: var(--iris-mist);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   TEAM LINE
+   ========================================================= */
+
+.team-line {
+    width: 55px;
+
+    height: 1px;
+
+    margin: 14px 0;
+
+    background:
+        var(--lilac);
+}
+
+
+/* =========================================================
+   TEAM SYMBOL
+   ========================================================= */
+
+.team-symbol {
+    position: relative;
+
+    color: var(--lilac);
+
+    font-size: 14px;
+}
+/* =========================================================
+   TEAM QUOTE
+   ========================================================= */
+
+.team-quote {
+    margin-top: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 22px;
+
+    text-align: center;
+}
+
+
+.team-quote p {
+    color: var(--text-soft);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+
+    font-style: italic;
+}
+
+
+.quote-star {
+    color: var(--iris-mist);
+
+    font-size: 18px;
+
+    text-shadow:
+        0 0 12px
+        rgba(186, 176, 200, 0.6);
+}
+
+
+/* =========================================================
+   TEAM — TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .team-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   TEAM — MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .team-section {
+        padding:
+            80px 20px;
+    }
+
+
+    .team-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+
+    .team-card {
+        min-height: 300px;
+
+        padding:
+            20px 10px;
+    }
+
+
+    .team-name {
+        font-size: 17px;
+    }
+
+
+    .team-role {
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .team-silhouette {
+        width: 110px;
+        height: 160px;
+    }
+
+
+    .team-quote {
+        gap: 10px;
+    }
+
+
+    .team-quote p {
+        font-size: 15px;
+    }
+
+}
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    text-align: center;
+
+    padding:
+        70px 20px 40px;
+
+    border-top:
+        1px solid
+        rgba(215, 197, 210, 0.10);
+}
+
+
+/* =========================================================
+   FOOTER LOGO
+   ========================================================= */
+
+.footer-logo {
+    color: var(--silver-wisteria);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 25px;
+
+    font-weight: 600;
+}
+
+
+.footer-logo span {
+    color: var(--iris-mist);
+
+    text-shadow:
+        0 0 12px
+        rgba(186, 176, 200, 0.6);
+}
+
+
+.footer-logo small {
+    color: var(--iris-mist);
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    margin-left: 3px;
+}
+
+
+/* =========================================================
+   FOOTER DESCRIPTION
+   ========================================================= */
+
+.footer p {
+    margin-top: 8px;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FOOTER STARS
+   ========================================================= */
+
+.footer-stars {
+    margin: 25px 0;
+
+    color: var(--iris-mist);
+
+    font-size: 15px;
+
+    text-shadow:
+        0 0 12px
+        rgba(186, 176, 200, 0.5);
+}
+
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+.copyright {
+    color: #7C6789;
+
+    font-size: 11px;
+
+    letter-spacing: 0.5px;
+}
+/* =========================================================
+   FINAL MOBILE POLISH
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .navbar {
+        padding:
+            20px 18px;
+    }
+
+
+    .logo {
+        font-size: 19px;
+    }
+
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+
+    .hero-visual {
+        transform: scale(0.82);
+
+        margin-top: -20px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 39px;
+    }
+
+
+    .form-card {
+        padding: 20px;
+    }
+
+
+    .form-card-header {
+        gap: 11px;
+    }
+
+
+    .form-icon {
+        width: 39px;
+        height: 39px;
+
+        font-size: 17px;
+    }
+
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .team-card {
+        min-height: 290px;
+    }
+
+
+    .team-quote {
+        flex-direction: column;
+    }
+
+
+    .footer {
+        padding:
+            55px 20px 30px;
+    }
+
+}

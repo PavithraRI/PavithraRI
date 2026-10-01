@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ComicCraft AI | Your Story, Our Magic</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         MAGICAL BACKGROUND
+         ===================================================== -->
+
+    <div class="night-sky">
+
+        <div class="moon"></div>
+
+        <div class="star star-1"></div>
+        <div class="star star-2"></div>
+        <div class="star star-3"></div>
+        <div class="star star-4"></div>
+        <div class="star star-5"></div>
+        <div class="star star-6"></div>
+        <div class="star star-7"></div>
+        <div class="star star-8"></div>
+        <div class="star star-9"></div>
+        <div class="star star-10"></div>
+        <div class="star star-11"></div>
+        <div class="star star-12"></div>
+
+
+        <div class="constellation constellation-one">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <i></i>
+            <i></i>
+            <i></i>
+
+        </div>
+
+
+        <div class="constellation constellation-two">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <i></i>
+            <i></i>
+            <i></i>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <span class="logo-star">✦</span>
+
+            <span>ComicCraft</span>
+
+            <small>AI</small>
+
+        </div>
+
+
+        <nav>
+
+            <a href="/" class="nav-link active">
+                Create
+            </a>
+
+            <a href="#team" class="nav-link">
+                About
+            </a>
+
+        </nav>
+
+
+        <div class="nav-badge">
+            ✦ AI STORY STUDIO
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO SECTION
+         ===================================================== -->
+
+    <main class="hero-section">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                ✦ TURN YOUR IMAGINATION INTO PANELS
+            </div>
+
+
+            <h1>
+
+                Your Story.
+
+                <br>
+
+                <span>Our Magic.</span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                Create an original AI-powered comic from a simple idea.
+                Build your characters, choose your world, and let
+                ComicCraft bring your story to life.
+
+            </p>
+
+
+            <a href="#create" class="cloud-button">
+
+                <span class="cloud-icon">
+                    ☁
+                </span>
+
+                <span>
+                    Start Creating
+                </span>
+
+                <span class="button-arrow">
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- HERO STORY CARD -->
+
+        <div class="hero-visual">
+
+            <div class="floating-tag character-tag">
+                ✦ CHARACTER
+            </div>
+
+
+            <div class="story-card-wrapper">
+
+                <div class="story-card">
+
+                    <div class="card-sparkle">
+                        ✦
+                    </div>
+
+
+                    <h2>
+
+                        YOUR
+
+                        <br>
+
+                        STORY
+
+                    </h2>
+
+
+                    <p>
+                        becomes magic.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="floating-tag magic-tag">
+                ✦ MAGIC
+            </div>
+
+
+            <div class="floating-tag story-tag">
+                ✦ STORY
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         CREATE SECTION
+         ===================================================== -->
+
+    <section id="create" class="create-section">
+
+
+        <!-- SECTION HEADING -->
+
+        <div class="section-heading">
+
+            <div class="section-eyebrow">
+                ✦ CREATE YOUR COMIC
+            </div>
+
+
+            <h2>
+
+                Bring a world
+
+                <span>
+                    to life.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Tell us the story you imagine.
+                We'll transform it into a five-panel comic.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             IMPORTANT:
+             ONE FORM CONTAINS ALL FIVE INPUTS
+             ================================================= -->
+
+        <form
+            action="/generate"
+            method="post"
+            class="comic-form"
+        >
+
+
+            <!-- =================================================
+                 01 STORY IDEA
+                 ================================================= -->
+
+            <div class="form-card story-card-form">
+
+                <div class="form-card-header">
+
+                    <div class="form-icon">
+                        ✎
+                    </div>
+
+
+                    <div>
+
+                        <span class="step-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Story Idea
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <label for="prompt">
+                    What happens in your story?
+                </label>
+
+
+                <textarea
+                    id="prompt"
+                    name="prompt"
+                    rows="5"
+                    placeholder="A young girl discovers a mysterious glowing book inside an abandoned library..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 02 MAIN CHARACTER
+                 ================================================= -->
+
+            <div class="form-card">
+
+                <div class="form-card-header">
+
+                    <div class="form-icon">
+                        ✦
+                    </div>
+
+
+                    <div>
+
+                        <span class="step-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Main Character
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <label for="character_name">
+                    Character name
+                </label>
+
+
+                <input
+                    type="text"
+                    id="character_name"
+                    name="character_name"
+                    placeholder="e.g. Aria"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- =================================================
+                 03 CHOOSE WORLD
+                 ================================================= -->
+
+            <div class="form-card">
+
+                <div class="form-card-header">
+
+                    <div class="form-icon">
+                        ◇
+                    </div>
+
+
+                    <div>
+
+                        <span class="step-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Choose a World
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <label for="setting">
+                    Where does the story happen?
+                </label>
+
+
+                <select
+                    id="setting"
+                    name="setting"
+                    required
+                >
+
+                    <option value="">
+                        Select a setting
+                    </option>
+
+
+                    <option value="Enchanted Forest">
+                        Enchanted Forest
+                    </option>
+
+
+                    <option value="Magical Library">
+                        Magical Library
+                    </option>
+
+
+                    <option value="Fantasy Kingdom">
+                        Fantasy Kingdom
+                    </option>
+
+
+                    <option value="Underwater World">
+                        Underwater World
+                    </option>
+
+
+                    <option value="Futuristic City">
+                        Futuristic City
+                    </option>
+
+
+                    <option value="Outer Space">
+                        Outer Space
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 04 STORY MOOD
+                 ================================================= -->
+
+            <div class="form-card">
+
+                <div class="form-card-header">
+
+                    <div class="form-icon">
+                        ☾
+                    </div>
+
+
+                    <div>
+
+                        <span class="step-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Story Mood
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <label for="tone">
+                    How should it feel?
+                </label>
+
+
+                <select
+                    id="tone"
+                    name="tone"
+                    required
+                >
+
+                    <option value="">
+                        Select a tone
+                    </option>
+
+
+                    <option value="Magical and Whimsical">
+                        Magical &amp; Whimsical
+                    </option>
+
+
+                    <option value="Mysterious">
+                        Mysterious
+                    </option>
+
+
+                    <option value="Adventurous">
+                        Adventurous
+                    </option>
+
+
+                    <option value="Heartwarming">
+                        Heartwarming
+                    </option>
+
+
+                    <option value="Dark and Mysterious">
+                        Dark &amp; Mysterious
+                    </option>
+
+
+                    <option value="Funny and Lighthearted">
+                        Funny &amp; Lighthearted
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 05 ART STYLE
+                 ================================================= -->
+
+            <div class="form-card">
+
+                <div class="form-card-header">
+
+                    <div class="form-icon">
+                        ✧
+                    </div>
+
+
+                    <div>
+
+                        <span class="step-number">
+                            05
+                        </span>
+
+                        <h3>
+                            Art Style
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <label for="style">
+                    How should your comic look?
+                </label>
+
+
+                <select
+                    id="style"
+                    name="style"
+                    required
+                >
+
+                    <option value="">
+                        Select an art style
+                    </option>
+
+
+                    <option value="Colorful comic book">
+                        Colorful Comic Book
+                    </option>
+
+
+                    <option value="Anime inspired">
+                        Anime Inspired
+                    </option>
+
+
+                    <option value="Fantasy illustration">
+                        Fantasy Illustration
+                    </option>
+
+
+                    <option value="Watercolor">
+                        Watercolor
+                    </option>
+
+
+                    <option value="Cinematic digital art">
+                        Cinematic Digital Art
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 GENERATE BAR
+                 ================================================= -->
+
+            <div class="generate-bar">
+
+                <div class="generate-message">
+
+                    <span class="sparkle">
+                        ✦
+                    </span>
+
+
+                    <span>
+
+                        Your story will become
+
+                        <strong>
+                            5 illustrated panels
+                        </strong>
+
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="generate-button"
+                >
+
+                    <span class="cloud-icon">
+                        ☁
+                    </span>
+
+
+                    <span>
+                        Generate My Comic
+                    </span>
+
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TEAM SECTION
+         ===================================================== -->
+
+    <section id="team" class="team-section">
+
+
+        <div class="section-heading team-heading">
+
+            <div class="section-eyebrow">
+                ✦ THE MAGIC MAKERS
+            </div>
+
+
+            <h2>
+
+                Meet the
+
+                <span>
+                    Creators.
+                </span>
+
+            </h2>
+
+
+            <p>
+                Five imaginations. One magical world.
+            </p>
+
+        </div>
+
+
+
+        <div class="team-grid">
+
+
+            <!-- PAVITHRA -->
+
+            <div class="team-card">
+
+                <div class="team-glow"></div>
+
+                <div class="team-silhouette">
+                    ✦
+                </div>
+
+                <div class="team-name">
+                    PAVITHRA
+                </div>
+
+                <div class="team-role">
+                    CREATIVE LEAD
+                </div>
+
+                <div class="team-line"></div>
+
+                <div class="team-symbol">
+                    ✧
+                </div>
+
+            </div>
+
+
+
+            <!-- NARMADHA -->
+
+            <div class="team-card">
+
+                <div class="team-glow"></div>
+
+                <div class="team-silhouette">
+                    ☾
+                </div>
+
+                <div class="team-name">
+                    NARMADHA
+                </div>
+
+                <div class="team-role">
+                    STORY ARCHITECT
+                </div>
+
+                <div class="team-line"></div>
+
+                <div class="team-symbol">
+                    ✦
+                </div>
+
+            </div>
+
+
+
+            <!-- PANJALI -->
+
+            <div class="team-card">
+
+                <div class="team-glow"></div>
+
+                <div class="team-silhouette">
+                    ◇
+                </div>
+
+                <div class="team-name">
+                    PANJALI
+                </div>
+
+                <div class="team-role">
+                    VISUAL DESIGNER
+                </div>
+
+                <div class="team-line"></div>
+
+                <div class="team-symbol">
+                    ✧
+                </div>
+
+            </div>
+
+
+
+            <!-- NITHILA -->
+
+            <div class="team-card">
+
+                <div class="team-glow"></div>
+
+                <div class="team-silhouette">
+                    ✧
+                </div>
+
+                <div class="team-name">
+                    NITHILA
+                </div>
+
+                <div class="team-role">
+                    AI CREATOR
+                </div>
+
+                <div class="team-line"></div>
+
+                <div class="team-symbol">
+                    ☽
+                </div>
+
+            </div>
+
+
+
+            <!-- NIVEDHA -->
+
+            <div class="team-card">
+
+                <div class="team-glow"></div>
+
+                <div class="team-silhouette">
+                    ✦
+                </div>
+
+                <div class="team-name">
+                    NIVEDHA
+                </div>
+
+                <div class="team-role">
+                    MAGIC BUILDER
+                </div>
+
+                <div class="team-line"></div>
+
+                <div class="team-symbol">
+                    ✦
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- TEAM QUOTE -->
+
+        <div class="team-quote">
+
+            <span class="quote-star">
+                ✦
+            </span>
+
+
+            <p>
+                Every story begins with a little imagination.
+            </p>
+
+
+            <span class="quote-star">
+                ✦
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+
+            <span>
+                ✦
+            </span>
+
+            ComicCraft
+
+            <small>
+                AI
+            </small>
+
+        </div>
+
+
+        <p>
+            Where imagination becomes illustration.
+        </p>
+
+
+        <div class="footer-stars">
+
+            ✦ &nbsp;&nbsp;
+            ✧ &nbsp;&nbsp;
+            ✦
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 ComicCraft AI
+            · Created with imagination
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
